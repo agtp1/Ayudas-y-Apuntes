@@ -1,0 +1,24 @@
+Aquí se muestran unas cuantas herramientas de hacking, se explica para que sirve y su utilización. 
+
+responder: sirve para capturar hash
+
+john the ripper: desencriptar hash
+
+nmap: escaneo de puertos abiertos (nmap -sC -sV ip)   
+escaneo de dispositivos en la red (nmap -O red192.168.1.0/24)
+
+sublist3r: para listar subdominios (sublist3r -d dominio)
+
+gobuster: para listar subdirectorios (gobuster dir vhost -w /usr/share/seclist -u http://dominio o ip
+para listar subdominios (gobuster -w LALISTA -u http://dominio --append-domain)
+
+evil-winrm: estblecer conexion con el servidor una vez tengamos usuario y contraseña
+
+nc -nvlp puerto: sirve para escuchar por un puerto
+
+seclist(es una lista subdominios, apt install seclists)/usr/share/seclist
+
+searchsploit sploit (para buscar sploits fuera de metasploit)
+
+DONDE ESTAS LAS LISTAS
+Estan en /usr/share/wordlists 

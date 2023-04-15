@@ -1,0 +1,6 @@
+NEXTCLOUD ES COMO GOOGLE DRIVE PERO CASERO
+
+Hay que meterse en /var/www/nextcloud/config ,editar el archivo config.php y añadir la ip o el dominio que queremos dar confianza.
+
+USUARIO DEFAULT
+admin

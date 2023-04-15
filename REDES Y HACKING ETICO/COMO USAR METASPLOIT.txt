@@ -1,0 +1,20 @@
+Metasploit es una herramienta para explotar vulerabilidades.
+
+ABRIMOS METASPLOIT(ES DECIR LA BASE DE DATOS DE SPLOITS)
+-Con search buscamos la vulnerabidad que hemos encontrado con nmap es decir "search vulnerabilidad".
+
+-Si nos encuentra sploits hacemos "use numerodelsploit"
+
+-"show options"
+
+-En RHOSTS ponemos la maquina objetivo, lo hacemos con "set RHSOTS ip"
+
+-Ahora hacemos un show payloads, y seleccionames uno con "set payload numerodelpayload"
+
+-"show options"
+
+-En LHOST ponemos la ip escucha, es decir la ip de nuestro pc, lo hacemos con "set LHOST ip"
+
+-Y con el comando "run" ejecutamos.
+
+ 
