@@ -1,4 +1,0 @@
-Sirve para ver quien se conecta a ti, a ti servidor etc.
-
-sudo apt install net-tools
-netstat -n

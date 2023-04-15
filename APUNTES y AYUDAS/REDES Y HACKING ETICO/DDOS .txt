@@ -1,4 +1,0 @@
-https://www.youtube.com/watch?v=bPz6RYe6T1c
-ping -s(tamaño/size) 8192(paquetes muy pesados) -i (interval) 0.0001 ip
-EJEMPLO:
-ping -s 8192 -i 0.001 192.168.1.100
