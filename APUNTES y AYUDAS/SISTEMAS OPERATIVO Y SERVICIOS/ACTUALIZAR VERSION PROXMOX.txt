@@ -1,0 +1,6 @@
+En el fichero /etc/apt/sources.list
+
+Añade el siguiente repositorio:
+deb http://download.proxmox.com/debian/pve bullseye pve-no-subscription
+
+Luego: apt update && apt upgrade

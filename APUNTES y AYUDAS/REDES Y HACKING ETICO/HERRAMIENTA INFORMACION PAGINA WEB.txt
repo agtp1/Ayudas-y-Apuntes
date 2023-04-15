@@ -1,0 +1,3 @@
+WAPALYZER
+-Es una extension(de navegador web), que nos muestra información adicional de una pagina web.
+

@@ -1,0 +1,10 @@
+pvecm create nombredelcluster (crear el cluster)
+
+ssh "ip del servidor que queremos añadir al cluster"
+
+pvecm add "ip del servidor del cluster" 
+
+
+
+
+
