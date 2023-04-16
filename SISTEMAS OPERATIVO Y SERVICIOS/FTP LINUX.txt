@@ -1,0 +1,30 @@
+root@HOLA:~# apt -y install vsftpd
+root@HOLA:~# vi /etc/vsftpd.conf
+# line 31: uncomment
+
+write_enable=YES
+# line 99,100: Descomentar, es decir quitar "#" (allow ascii mode transfer)
+
+ascii_upload_enable=YES
+ascii_download_enable=YES
+# line 122: Descomentar, es decir quitar "#" (enable chroot)
+
+chroot_local_user=YES
+# line 123: Descomentar, es decir quitar "#" (enable chroot list)
+
+ls_recurse_enable=YES
+# add to the end : specify chroot directory
+
+# if not specified, users' home directory equals FTP home directory
+
+local_root=public_html
+# turn off seccomp filter if cannot login normally
+
+seccomp_sandbox=NO
+
+root@HOLA:~# vi /etc/vsftpd.chroot_list
+# add users you allow to move over their home directory
+
+ubuntu
+
+root@HOLA:~# systemctl restart vsftpd 
