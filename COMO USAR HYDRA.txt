@@ -1,7 +1,0 @@
-Hydra es una herramienta que se utiliza para sacar el usuario y contraseña a fuerza bruta.
-
-Si queremos sacar la contraseña y el usuario de un SERVIVIO, como por ejemplo ftp o ssh hacemos lo hacemos de la siguiente manera.
-hydra ip_objetivo servicio(ftp/ssh/etc) -L/-l(-L si no sabemos el usuario, seguido ponemos la lista como por ejemplo rockyou. Si sabemos el usuario ponemos -l y el usuario) rockyou.txt -P/-p(-P si no sabemos la contraseña, seguido ponemos la lista como por ejemplo rockyou. Si sabemos el usuario ponemos -l y el usuario) -L rockyou -s 21/22 etc(el servicio)
-
-EJEMPLO: 
-hydra 192.168.150.10 ftp -L rockyou.txt -P rockyou.txt -s 21
