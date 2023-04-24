@@ -1,0 +1,15 @@
+Aquí buscaremos colocarnos en medio entre dos dispositivos para capurar paquetes.
+
+Primero abriremo ETTHERCAP. 
+Seguidamente escanearmos los hosts que hay en la red local. (ES LA LUPITA DE ARRIBA A LA IZQUIERDA)
+
+Una vez escaneados los hosts, los mostraremos. (ESTA AL LADO DE LA LUPITA)
+
+Ahora marcamos el HOST como target 1 y el servidor en target 2. Por ejemplo si queremos escanear el trafico del equipo 192.168.1.10 hacia el servidor 192.168.1.1 ponemos el equipo en target 1 i el servidor en target 2.
+
+Ponemos la opcion ARP SPOOFING. Ahora ya estariamos en el medio.
+
+Ahora con una herramienta de escaneo de paquetes, por ejemplo con wireshark, nos pondremos a escuchar.
+
+Filtramos el trafico HTTP y por ejemplo si el equipo se conecta al servidor hay una pagina de logeo y se logea con wireshark podremos analizar los paquetes y nos saldra el usuario y la contraseña que a puesto en el login. 
+
