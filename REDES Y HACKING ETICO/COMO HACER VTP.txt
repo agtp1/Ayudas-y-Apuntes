@@ -1,0 +1,13 @@
+VLAN Trunking Protocol, es un protocolo de los switches cisco en el qual, si pones un switch en modo servidor, las vlans creadas en este switch se crearan automaticamente en los demas switches. 
+
+CONFIGURACION:
+en
+conf t
+vtp domain NOMBRE
+vtp mode server
+
+-Cabe recalcar que hay que tener los puertos que conectan los switches en modo trunk
+
+Ahora simplemente creamos las vlans.
+vlan 10
+name NOMBRE_VLAN
