@@ -1,0 +1,3 @@
+En cisco packet tracert podemos hacemos RIP, en la seccion de routing.
+Esto sirve para que se puedan comunicar todas las redes a traves del router.
+Simplemente tenemos que poner las redes que se sabe nuestro router.
