@@ -1,0 +1,47 @@
+Primero nos instalamos el paquete bind9
+
+- sudo apt install bind9
+
+
+Ahora añadimos la zona que queremos en /etc/bind/named.conf.local
+ 
+ - zone "nombrezona.local" {
+     type master;
+     file "/etc/bind/zones/nombre_archivo_configuracion";
+   }; 
+
+
+Seguidamente creamos la carpeta zones en /etc/bind/
+
+ - mkdir zones
+
+
+A continuación, el archivo db.local lo tenemos que copiar en zones con el nombre del archivo de configuración de nuestra zona
+
+ - cp db.local /etc/bind/zones/nombre_archivo_configuracion
+
+
+Y ahora configuraremos este archivo.
+
+ $TTL    604800
+@    IN    SOA    dominio.local. root.dominio.local. (
+                  2        ; Serial
+             604800        ; Refresh
+              86400        ; Retry
+            2419200        ; Expire
+             604800 )    ; Negative Cache TTL
+;
+@    IN    NS    ns1.dominio.local.
+@    IN    A     IP_SERVIDOR_DNS
+ns1  IN    A     IP_SERVIDOR_DNS
+
+Si queremos hacer un subdominio, por ejemplo un ftp.dominio.local tendriamos que añadir abajo de lo anterior lo siguiente.
+
+ftp IN    A      IP_SERVIDOR_FTP
+
+Recomindo editar el archivo /etc/resolv.conf y en nameserver poner 127.0.0.1
+
+
+
+Por ultimo reiniciamos el servicio con "systemctl restart bind9" y comprovamos que funciona correctamente con "systemctl status bind9".
+
