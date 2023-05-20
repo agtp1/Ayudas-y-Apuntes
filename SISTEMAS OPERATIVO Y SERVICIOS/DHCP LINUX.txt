@@ -8,6 +8,7 @@ Editarmos el siguiente archivo
 Ahora editaremos el archivo de configuracion del dhcp server
  - nano /etc/dhcp/dhcpd.conf
  - Linea 10: option domain-name "vuestro dominio" ; (si no teneis no pasa nada lo podeis dejar en blanco)
+ - Linea 11: option domain-name-server ip_servidor_dns; -->por ejemplo 8.8.8.8 o un dns propio
  - Linea 24: descomentamos la linea es decir le quitamos el "#" "authoritative;"
  - Por úlitmo al final del archivo añadiremos las opciones de nuestro dhcp:
 
