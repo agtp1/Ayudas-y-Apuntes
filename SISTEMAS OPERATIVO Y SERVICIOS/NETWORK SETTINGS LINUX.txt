@@ -6,13 +6,11 @@ EDITAMOS EL ARCHIVO DE CONFIGURACON
        enp1s0: --> NUESTRA INTERFICIE DE RED
          dhcp4: false --> EN CASO QUE QUERAMOS RECIBIR IP POR DHCP PONEMOS TRUE
          addresses: [192.168.1.2/24] --> EN CASO QUE QUERAMOS UNA IP ESTÁTICA PONEMOS ESTO 
-  
-       dhcp6: false --> EN CASO QUE QUERRAMOS RECIBIR IPV6 PONEMOS TRUE
-
+         gateway4: 192.168.1.1 --> NUESTRO GEWAY
+         nameservers:
+           addresses: [1.1.1.1, 8.8.8.8] --> PODEMOS PONER LOSN DNS QUE QUERAMOS COMO POR EJEMPLO UNO PROPIO
    version: 2
 
 APLICAMOS LOS CAMBIOS
  - netplan apply
 
-Y EN EL SIGUIENTE ARCHIVO PONEMOS LOS DNS QUE DESEAMOS
- - nano /etc/resolv.conf -->en nameservers ponemos el 8.8.8.8 por ejemplo
