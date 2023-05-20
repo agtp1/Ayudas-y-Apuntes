@@ -1,0 +1,25 @@
+Instalamos el paquete
+- apt install isc-dhcp-server
+
+Editarmos el siguiente archivo
+ - nano /etc/default/isc-dhcp-server y en interfaces4 (es decir IPV4), pondremos la interficie de red la 
+   cual queremos que este situado nuestro dhcp server.
+
+Ahora editaremos el archivo de configuracion del dhcp server
+ - nano /etc/dhcp/dhcpd.conf
+ - Linea 10: option domain-name "vuestro dominio" ; (si no teneis no pasa nada lo podeis dejar en blanco)
+ - Linea 24: descomentamos la linea es decir le quitamos el "#" "authoritative;"
+ - Por úlitmo al final del archivo añadiremos las opciones de nuestro dhcp:
+
+   subnet 192.168.1.0 netmask 255.255.255.0 { --> ESTO ES LA RED Y LA MASCARA DE SUBRED
+   option routers 192.168.1.1 ; --> INDICAMOS NUESTRO GATEWAY
+   option subnet-mask 255.255.255.0; --> VOLVEMOS A INDICAR NUESTRA MASCARA 
+   range dynamic-bootp 192.168.1.10 192.168.1.20; --> INCICAMOS EL RANGO DE IPs QUE QUEREMOS REPARTIR
+   }
+
+Por ultimo reiniciamos nuestro servicio
+ - systemctl restart isc-dhcp-server
+
+RECOMIENDO CONFIGURAR NUESTRA IP ESTATICA
+ - nano /etc/netplan/00-installer-config.yaml
+
