@@ -1,0 +1,17 @@
+EDITAMOS EL ARCHIVO DE CONFIGURACON
+ - nano /etc/netplan/00-installer.yaml
+   
+   network:
+     ethernets:
+       enp1s0: --> NUESTRA INTERFICIE DE RED
+         dhcp4: false --> EN CASO QUE QUERAMOS RECIBIR IP POR DHCP PONEMOS TRUE
+         addresses: [192.168.1.2/24] --> EN CASO QUE QUERAMOS UNA IP ESTÁTICA PONEMOS ESTO 
+       nameservers:
+         addresses [8.8.8.8] --> PONEMOS POR EJEMPLO EL DE GOOGLE O EL QUE QUERAMOS
+        
+       dhcp6: false --> EN CASO QUE QUERRAMOS RECIBIR IPV6 PONEMOS TRUE
+
+   version: 2
+
+APLICAMOS LOS CAMBIOS
+ - netplan apply
